@@ -12,4 +12,6 @@ docker container
 postgress
 ---------
 
-psql -h myhost -d mydb -U myuser = login with host myhost database mydb and user myuser;
+`psql -h myhost -d mydb -U myuser` = login with host myhost database mydb and user myuser;
+`\dn` = schemas list;
+
