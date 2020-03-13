@@ -13,5 +13,17 @@ postgress
 ---------
 
 `psql -h myhost -d mydb -U myuser` = login with host myhost database mydb and user myuser;
+
 `\dn` = schemas list;
+
+`\c my_schema` = connect to schema myshema;
+
+`\dt` = list of tables of current schema;
+
+curl 
+----
+
+`sudo apt install curl` istall curl
+
+`curl lockalhost/my/url -XPOST -H"
 
