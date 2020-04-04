@@ -27,3 +27,11 @@ curl
 
 `curl lockalhost/my/url -XPOST -H"
 
+to start new project
+--------------------
+
+- create with ```git clone my/github/url my_project```
+new project
+- ``` cd my_project ```
+- ```git submodule add https://github.com/Laradock/laradock.git laradock_my_project```
+
