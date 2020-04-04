@@ -34,4 +34,6 @@ to start new project
 new project
 - ``` cd my_project ```
 - ```git submodule add https://github.com/Laradock/laradock.git laradock_my_project```
+- enter into sub folder with laradock ``` cd laradock_my_project ```
+- do copy envitoment ```cp env-example .env```
 
