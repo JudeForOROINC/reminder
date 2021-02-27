@@ -1,5 +1,11 @@
 # reminder
 
+mysql
+-----
+
+to upload dump under container: `sudo docker exec -i mysql_container_name mysql -uUserName -pPassword DBName < MyDump.sql` where mysql_container_name = name of container from `docker ps` , UserName - name of user, for example root,  Password - password of user for db , for example root, DBName - schema name where dump must be uploaded. MyDump.sql - file path and file name with dump from . root
+
+
 ubuntu cli
 
 docker container
