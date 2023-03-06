@@ -56,3 +56,10 @@ How to build microservices
 
 First rule it must be agnostic. service must know nothin about other world. it must know that it know only. for example if service store users, if must know nothing about previleges or favorite items or last login date or categories that recommended, ect. it must know about user. may be connect info or name and login end all thar related to this, email, register. servise with privilagies can have information about first level - permissions - but know nothing about rest.  service security can join info of two services - users and permissions.  and call them when check rights but do not store external info. Goal :  protection from dead lock.  user can not wait security message cause it never know that security exists.  so all requests with security (where, probably can generated dead lock) may be done from security side ( but it under one repo conrtol so its easy to find and fix this bug)
 other profit is that we can have smal services with clear logic. and it is not hard to change it .  in monolish case logic separated between many classes so some time its imposible change somethin without braking all rest :)
+
+Clean Architecture
+------------------
+
+Today modern is clean arcitecture style.  it mean layers. bisness logic layer, infrostucture layer, interface layer, in some frameworks / languages/ ect  it can be 4 layers.
+actualy it is not MVS.  Models is not that models that we know - it separated to Models from BUSINESS ( like what business uderstand that important) and models with some additional info ot nomalazed or else ))).  like User in busines understanding - its a lot of different stuff but first of all it is a buyer. in sence infrostructure its a email or login name or id. in sense of interface how to join 4-5 tables in database to some request from busines model " report all buyed items for this month"  
+so main ide is good - separate busines logic from realization. create small classes with SOLID principes and so on. Realization is not than good = in most cases a lot of ppl have no idea why we broke framework and inject 5 time more classes when we can solve all this with one method. 
