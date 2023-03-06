@@ -43,3 +43,10 @@ new project
 - enter into sub folder with laradock ``` cd laradock_my_project ```
 - do copy envitoment ```cp env-example .env```
 
+project architecture
+-----------
+
+Main part is how to choose architecture type.  Classically famous frameworks propose MVC moniolith . it mean that you have all code in one repo sorted by folders that stored in frameworke. other case SOA Service oriented architecture. its alse can be monolith but with small classes like Service prefics or suffics. and of cource it can be separated service from aech other that logicaly or fisicaly ( DB, instance, or even container separated, redy to scale.) and last known type is micro services. it mean a lot of small or very small services that can be done with totally separation and that very simple. main idea - you can change or rebuild it without rebuilding all rest services. and if you have some problem with communication between this serwices you never know when it start :P  . So :
+ - Monolith
+ - SOA
+ - Micro services.
