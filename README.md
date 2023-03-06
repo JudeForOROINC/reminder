@@ -50,3 +50,9 @@ Main part is how to choose architecture type.  Classically famous frameworks pro
  - Monolith
  - SOA
  - Micro services.
+
+How to build microservices
+--------------------------
+
+First rule it must be agnostic. service must know nothin about other world. it must know that it know only. for example if service store users, if must know nothing about previleges or favorite items or last login date or categories that recommended, ect. it must know about user. may be connect info or name and login end all thar related to this, email, register. servise with privilagies can have information about first level - permissions - but know nothing about rest.  service security can join info of two services - users and permissions.  and call them when check rights but do not store external info. Goal :  protection from dead lock.  user can not wait security message cause it never know that security exists.  so all requests with security (where, probably can generated dead lock) may be done from security side ( but it under one repo conrtol so its easy to find and fix this bug)
+other profit is that we can have smal services with clear logic. and it is not hard to change it .  in monolish case logic separated between many classes so some time its imposible change somethin without braking all rest :)
